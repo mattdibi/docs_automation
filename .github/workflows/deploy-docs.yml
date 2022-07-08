@@ -18,10 +18,15 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Setup doc deploy
+      - name: Configure Git user
         run: |
-          git config --global user.name Docs deploy
-          git config --global user.email docs@dummy.bot.com
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
 
-      - name: Build docs website
-        run: mike deploy --push 1.0.0 latest
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
+      - name: Deploy with mike
+        run: mike deploy --push ${{ steps.extract_branch.outputs.branch }}
