@@ -2,7 +2,7 @@ name: Deploy docs
 on:
   push:
     branches:
-      - 'docs-release-*.*.*'
+      - 'docs-release-*.*'
       - master
 jobs:
   deploy-docs:
