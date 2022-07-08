@@ -1,0 +1,8 @@
+### OSX ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### PyEnv ###
+.venv
