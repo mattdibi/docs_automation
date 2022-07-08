@@ -2,9 +2,10 @@ name: Deploy docs
 on:
   push:
     branches:
+      - 'docs-release-*.*.*'
       - master
 jobs:
-  deploy:
+  deploy-docs:
     runs-on: ubuntu-latest
     steps:
 
