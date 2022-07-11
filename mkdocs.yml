@@ -1,6 +1,7 @@
 site_name: Documentation automation test
 theme:
   name: material
+  custom_dir: overrides
 
 # Customization
 extra:
