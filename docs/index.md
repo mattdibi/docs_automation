@@ -21,3 +21,9 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 - [mkdocs](https://www.mkdocs.org/) (`pip3 install mkdocs`)
 - [material theme](https://squidfunk.github.io/mkdocs-material/) (`pip3 install mkdocs-material`)
 - [mike](https://github.com/jimporter/mike) (`pip3 install mike`)
+
+For installation:
+
+```bash
+pip install -r requirements.txt
+```
